@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block carousel %}{% endblock %}
+  
+
+{% block content %}
+    <h3>Nos meilleures ventes</h3>
+    <p>Découvrez les articles les plus vendus.</p>
+    <div class="row">
+      {% for product in products %}
+          <div class="col-md-3">
+              {% include "product/single_product.html.twig" %}
+          </div>
+      {% endfor %}    
+    </div>
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Une équipe de professionnels <span class="text-muted"> au grand savoir-faire.</span></h2>
+        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+      </div>
+      <div class="col-md-5">
+        <img src="{{ asset('assets/img/first.jpg') }}" class="img-fluid" alt="Un savoir faire Français">       
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">Veneznous rencontrer dans nos différentes <span class="text-muted">boutiques en France.</span></h2>
+        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="{{ asset('assets/img/second.jpg') }}" class="img-fluid" alt="Une boutique ouverte tout l'année">      
+      </div>
+    </div>
+    
+{% endblock %}
